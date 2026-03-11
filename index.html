@@ -3,284 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tension Treenets | Rooted & Intertwined</title>
+    <title>Tension Treenets | Aerial Sanctuaries & Hand-Woven Adventure</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
         
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('3A8BD499-3726-4F58-B664-250B37E0C9E2_1_201_a.jpg');
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070');
             background-size: cover;
             background-position: center;
         }
 
-        .glass {
+        .glass-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .gold-gradient {
-            background: linear-gradient(135deg, #d4af37 0%, #f4c430 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .text-earth { color: #d97706; } /* Orange/Bronze accent from logo and canyons */
+        .bg-earth { background-color: #d97706; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #d4af37 0%, #f4c430 100%);
-            transition: all 0.3s ease;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-        }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
     </style>
 </head>
-<body class="bg-[#0a0f0d] text-gray-100">
+<body class="bg-stone-950 text-stone-100">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center glass">
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-300" id="navbar">
         <div class="flex items-center space-x-2">
-            <span class="text-2xl font-bold gold-gradient tracking-tighter uppercase">Tension Treenets</span>
+            <img src="Gemini_Generated_Image_68fs3768fs3768fs-2.jpg" alt="Tension Treenets Logo" class="h-12 w-12 rounded-full border border-earth shadow-lg" onerror="this.src='https://placehold.co/100x100/332211/white?text=TT'">
+            <span class="font-bold text-xl tracking-wider uppercase hidden sm:block">Tension Treenets</span>
         </div>
-        <div class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-gray-400">
-            <a href="#builds" class="hover:text-[#d4af37] transition">Builds</a>
-            <a href="#safety" class="hover:text-[#d4af37] transition">Safety</a>
-            <a href="#pricing" class="hover:text-[#d4af37] transition">Pricing</a>
-            <a href="#quote" class="hover:text-[#d4af37] transition">Quote Builder</a>
+        <div class="space-x-8 text-sm font-semibold tracking-widest uppercase hidden md:flex">
+            <a href="#about" class="hover:text-earth transition">About</a>
+            <a href="#services" class="hover:text-earth transition">Services</a>
+            <a href="#sustainability" class="hover:text-earth transition">Sustainability</a>
+            <a href="#contact" class="px-5 py-2 bg-earth rounded-full hover:bg-orange-700 transition">Get a Quote</a>
         </div>
-        <a href="#quote" class="px-5 py-2 text-xs font-bold uppercase tracking-widest border border-[#d4af37] text-[#d4af37] rounded-full hover:bg-[#d4af37] hover:text-black transition">Inquire</a>
     </nav>
 
     <!-- Hero Section -->
-    <header class="h-screen flex items-center justify-center relative hero-bg text-center px-4">
-        <div class="max-w-4xl space-y-6">
-            <h4 class="text-[#d4af37] uppercase tracking-[0.5em] text-sm font-semibold mb-4">Crafting Elevated Living</h4>
-            <h1 class="text-6xl md:text-8xl text-white italic">Rooted & Intertwined</h1>
-            <p class="text-xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
-                Hand-woven functional art platforms designed for high-end residential lofts and organic canopy structures.
+    <section class="relative h-screen flex items-center justify-center hero-gradient text-center px-4">
+        <div class="max-w-4xl animate-fade-in">
+            <img src="Gemini_Generated_Image_68fs3768fs3768fs-2.jpg" alt="Tension Treenets Logo" class="mx-auto h-48 w-48 mb-8 drop-shadow-2xl rounded-full" onerror="this.style.display='none'">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Elevate Your Perspective.</h1>
+            <p class="text-xl md:text-2xl font-light text-stone-300 mb-10 max-w-2xl mx-auto">
+                Custom-engineered tree nets and aerial sanctuaries woven into the heart of nature.
             </p>
-            <div class="pt-8">
-                <a href="#quote" class="btn-gold px-10 py-4 rounded-full text-black font-bold uppercase tracking-widest text-sm">Start Your Build</a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#services" class="bg-earth text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition shadow-xl">Explore Our Work</a>
+                <a href="#contact" class="border border-white/30 backdrop-blur-md px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">Start a Project</a>
             </div>
         </div>
-    </header>
+        <div class="absolute bottom-10 animate-bounce cursor-pointer" onclick="document.getElementById('about').scrollIntoView()">
+            <svg class="w-8 h-8 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
 
-    <!-- The Inspiration Section -->
-    <section id="builds" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <h2 class="text-5xl leading-tight">Artistic Integrity.<br><span class="text-[#d4af37]">Structural Perfection.</span></h2>
-                <p class="text-gray-400 text-lg leading-relaxed">
-                    Inspired by the visionary work of pioneers like <span class="text-white italic">Treenet Willy</span> and <span class="text-white italic">Charlie’s Webs</span>, Cooper Van Houten delivers bespoke installations that transform voids into living space.
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-stone-900">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-earth font-bold uppercase tracking-widest text-sm mb-4">Our Vision</h2>
+                <h3 class="text-4xl font-bold mb-6">Crafting Spaces Above the Earth.</h3>
+                <p class="text-stone-400 leading-relaxed mb-6">
+                    Tension Treenets was born from a passion for high-altitude adventure and a deep respect for the forest canopy. Inspired by the rugged beauty of mountain landscapes—where the orange rock meets the white snow—we design nets that aren't just structures, but living art.
                 </p>
-                <div class="grid grid-cols-2 gap-8 pt-4 border-t border-gray-800">
-                    <div>
-                        <h3 class="text-xl mb-2 text-white italic">Indoor Lofts</h3>
-                        <p class="text-sm text-gray-500">Creating weightless functional ceilings and lounge nets that integrate with architectural ledger boards.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl mb-2 text-white italic">Outdoor Canopies</h3>
-                        <p class="text-sm text-gray-500">Tree-to-tree suspensions utilizing arborist-standard rigging that respects the health of the tree.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-[#d4af37] to-[#1a2e1c] rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <img src="08B34665-6AF2-4437-A48B-A355CB4CECF7.jpg" alt="Treenet Detail" class="relative rounded-2xl w-full object-cover shadow-2xl">
-            </div>
-        </div>
-    </section>
-
-    <!-- Safety Section -->
-    <section id="safety" class="bg-[#0d1411] py-24 px-6 border-y border-gray-900">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <h2 class="text-4xl italic mb-4">Certified for Peace of Mind</h2>
-            <div class="w-24 h-1 bg-[#d4af37] mx-auto mb-8"></div>
-        </div>
-        <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
-            <div class="glass p-8 rounded-2xl text-center space-y-4">
-                <i data-lucide="shield-check" class="mx-auto text-[#d4af37] w-10 h-10"></i>
-                <h3 class="text-xl font-bold">ANSI Z133</h3>
-                <p class="text-sm text-gray-400">Adhering to strict arboricultural safety standards for all outdoor tree rigging and attachment points.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl text-center space-y-4">
-                <i data-lucide="anchor" class="mx-auto text-[#d4af37] w-10 h-10"></i>
-                <h3 class="text-xl font-bold">OSHA 1926.105</h3>
-                <p class="text-sm text-gray-400">Utilizing high-impact safety net standards, ensuring perimeter breaking strengths exceeding 5,000 lbs.</p>
-            </div>
-            <div class="glass p-8 rounded-2xl text-center space-y-4">
-                <i data-lucide="ruler" class="mx-auto text-[#d4af37] w-10 h-10"></i>
-                <h3 class="text-xl font-bold">ASTM Standards</h3>
-                <p class="text-sm text-gray-400">All materials—from the core 550 Paracord to the static edge ropes—meet premium tensile specifications.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-16">
-            <div class="md:w-1/2 space-y-6">
-                <h2 class="text-5xl italic">Transparent Luxury</h2>
-                <p class="text-gray-400">
-                    A Tension Treenet is more than furniture; it is a permanent structural upgrade. We pride ourselves on a clear, no-surprises pricing model focused on quality materials and expert hand-weaving.
+                <p class="text-stone-400 leading-relaxed">
+                    Whether it's a "Sky Couch" for a backyard retreat or a multi-story "Crow's Nest" for a resort, our tensioned systems offer a unique, exhilarating way to experience the world from above.
                 </p>
-                <div class="p-8 border border-gray-800 rounded-2xl bg-gradient-to-br from-[#0a0f0d] to-[#121b16]">
-                    <div class="flex justify-between items-end mb-4">
-                        <span class="text-sm uppercase tracking-widest text-gray-500">The Net Build</span>
-                        <span class="text-4xl text-[#d4af37] italic font-bold">$60<span class="text-sm text-gray-400 not-italic">/sqft</span></span>
-                    </div>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-[#d4af37]"></i> Hand-woven custom paracord weave</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-[#d4af37]"></i> Heavy-duty static edge rope perimeter</li>
-                        <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-2 text-[#d4af37]"></i> Professional tensioning & tuning</li>
-                    </ul>
-                </div>
-                <div class="p-6 bg-[#d4af37]/10 rounded-2xl border border-[#d4af37]/20">
-                    <h4 class="text-[#d4af37] font-bold text-sm uppercase tracking-widest mb-2">Referral Incentive</h4>
-                    <p class="text-sm text-gray-300">Bring us a project! We offer a <span class="font-bold text-white">10% incentive</span> for successfully sold builds. (Ex: $600 commission on a 100sqft net).</p>
-                </div>
             </div>
-            <div class="md:w-1/2">
-                <img src="21E642C3-1CC2-4030-92F8-44D4B1DF8E0A_1_201_a.jpg" alt="Installation" class="rounded-2xl shadow-2xl h-full object-cover">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl h-96">
+                <!-- Fallback to a landscape similar to the video -->
+                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=1000" class="object-cover w-full h-full" alt="Nature Sanctuary">
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 to-transparent flex items-end p-8">
+                    <p class="text-sm font-medium italic">"The forest is our canvas; tension is our brush."</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Quote Builder -->
-    <section id="quote" class="py-24 px-6 bg-[#0a0f0d]">
-        <div class="max-w-4xl mx-auto glass p-10 md:p-16 rounded-[2.5rem] shadow-3xl">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl italic mb-2">Request Your Proposal</h2>
-                <p class="text-gray-400">Customize your build for a professional estimate.</p>
-            </div>
-
-            <form class="space-y-8" id="quote-form">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500">Installation Environment</label>
-                        <select id="env" class="w-full bg-black/50 border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-[#d4af37] transition appearance-none">
-                            <option value="indoor">Indoor Loft / Interior</option>
-                            <option value="outdoor">Outdoor / Tree Canopy</option>
-                        </select>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500">Surface Area (Sq Ft)</label>
-                        <input type="number" id="sqft" value="100" class="w-full bg-black/50 border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-[#d4af37] transition">
-                    </div>
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 md:px-12">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">What We Build</h2>
+            <div class="h-1 w-20 bg-earth mx-auto"></div>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="glass-card p-8 rounded-3xl hover:border-earth transition duration-500 group">
+                <div class="bg-stone-800 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-earth transition">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                 </div>
+                <h4 class="text-2xl font-bold mb-3">Custom Treenets</h4>
+                <p class="text-stone-400">Permanently hand-woven platforms installed between living anchors. Ideal for relaxation and meditation.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="glass-card p-8 rounded-3xl hover:border-earth transition duration-500 group">
+                <div class="bg-stone-800 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-earth transition">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Adventure Nets</h4>
+                <p class="text-stone-400">High-tension systems designed for movement, play, and vertical exploration. Rigged for safety and speed.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="glass-card p-8 rounded-3xl hover:border-earth transition duration-500 group">
+                <div class="bg-stone-800 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-earth transition">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Safe Rigging</h4>
+                <p class="text-stone-400">Professional inspection and tension maintenance using climbing-grade static ropes and paracord.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="py-24 px-6 md:px-12 bg-earth/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Designed for Trees, Not Just People.</h2>
+            <p class="text-lg text-stone-300 mb-8 leading-relaxed">
+                We believe in "doing dangerous things carefully." Our installation process utilizes custom wood blocks and padded anchors to prevent girdling and ensure the trees continue to sway naturally in the wind. We protect the forest integrity that supports us.
+            </p>
+            <div class="flex justify-center space-x-12 opacity-60">
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">100%</span>
+                    <span class="text-xs uppercase tracking-widest">Nylon Strength</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">Zero</span>
+                    <span class="text-xs uppercase tracking-widest">Permanent Damage</span>
+                </div>
+                <div class="text-center">
+                    <span class="block text-3xl font-bold">∞</span>
+                    <span class="text-xs uppercase tracking-widest">Possibility</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 md:px-12 bg-stone-950">
+        <div class="max-w-5xl mx-auto glass-card rounded-3xl overflow-hidden grid md:grid-cols-2">
+            <div class="p-12 bg-earth flex flex-col justify-between">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Ready to hang out?</h2>
+                    <p class="mb-8 opacity-90">Send us details about your trees or your space, and we'll help you design the perfect aerial retreat.</p>
+                </div>
                 <div class="space-y-4">
-                    <label class="text-xs font-bold uppercase tracking-widest text-gray-500">Subcontracted Structural Support</label>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label class="flex items-center p-4 bg-black/30 rounded-xl border border-gray-800 cursor-pointer hover:border-gray-600 transition">
-                            <input type="checkbox" id="ledger" class="w-5 h-5 accent-[#d4af37] mr-3">
-                            <span class="text-sm">Ledger Board Install</span>
-                        </label>
-                        <label class="flex items-center p-4 bg-black/30 rounded-xl border border-gray-800 cursor-pointer hover:border-gray-600 transition">
-                            <input type="checkbox" id="metal" class="w-5 h-5 accent-[#d4af37] mr-3">
-                            <span class="text-sm">Custom Metal Art Frame</span>
-                        </label>
-                        <label class="flex items-center p-4 bg-black/30 rounded-xl border border-gray-800 cursor-pointer hover:border-gray-600 transition">
-                            <input type="checkbox" id="trees" class="w-5 h-5 accent-[#d4af37] mr-3">
-                            <span class="text-sm">Tree Support Rigging</span>
-                        </label>
-                        <label class="flex items-center p-4 bg-black/30 rounded-xl border border-gray-800 cursor-pointer hover:border-gray-600 transition">
-                            <input type="checkbox" id="trampoline" class="w-5 h-5 accent-[#d4af37] mr-3">
-                            <span class="text-sm">Trampoline Frame Integration</span>
-                        </label>
-                    </div>
+                    <p class="flex items-center space-x-3">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>hello@tensiontreenets.com</span>
+                    </p>
+                    <p class="flex items-center space-x-3">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        <span>Based in the Utah Mountains</span>
+                    </p>
                 </div>
-
-                <!-- Result Area -->
-                <div class="p-8 bg-black rounded-2xl border border-gray-800 space-y-6">
-                    <div class="flex justify-between items-center border-b border-gray-900 pb-4">
-                        <span class="text-gray-400">Cooper's Craft Weave</span>
-                        <span class="font-bold text-white" id="net-cost">$0</span>
+            </div>
+            <div class="p-12">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 uppercase">Full Name</label>
+                        <input type="text" class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 focus:border-earth outline-none transition" placeholder="John Doe">
                     </div>
-                    <div class="flex justify-between items-center border-b border-gray-900 pb-4">
-                        <span class="text-gray-400">Subcontracted structural estimate</span>
-                        <span class="font-bold text-white italic" id="sub-cost">$0</span>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 uppercase">Email Address</label>
+                        <input type="email" class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 focus:border-earth outline-none transition" placeholder="john@example.com">
                     </div>
-                    <div class="flex justify-between items-center pt-2">
-                        <span class="text-lg text-white font-bold italic">Total Estimated Investment</span>
-                        <span class="text-2xl font-bold text-[#d4af37]" id="total-cost">$0</span>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 uppercase">Message</label>
+                        <textarea rows="4" class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 focus:border-earth outline-none transition" placeholder="Tell us about your trees..."></textarea>
                     </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-                    <input type="email" placeholder="Your Email for Proposal Copy" class="w-full bg-black/50 border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-[#d4af37] transition">
-                    <button type="button" onclick="sendInquiry()" class="btn-gold p-4 rounded-xl text-black font-bold uppercase tracking-widest text-sm">Send to Cooper</button>
-                </div>
-            </form>
+                    <button type="button" class="w-full bg-earth text-white font-bold py-4 rounded-xl hover:bg-orange-700 transition">Send Inquiry</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-24 px-6 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
-            <div class="space-y-4">
-                <h2 class="text-3xl italic gold-gradient">Tension Treenets</h2>
-                <p class="text-gray-500 max-w-sm">Elevated lounging solutions that respect nature and architecture. Rooted in Utah, built for the world.</p>
-            </div>
-            <div class="space-y-2">
-                <h4 class="text-xs uppercase tracking-widest text-gray-400">Direct Inquiries</h4>
-                <p class="text-xl text-white">435-990-1102</p>
-                <p class="text-[#d4af37] font-semibold">tensiontreenets@gmail.com</p>
-            </div>
-            <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="mail"></i></a>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-gray-900 text-center text-xs text-gray-600 uppercase tracking-widest">
-            &copy; 2025 Tension Treenets. Hand-woven by Cooper Van Houten.
-        </div>
+    <footer class="py-12 border-t border-stone-900 px-6 text-center text-stone-500 text-sm">
+        <img src="Gemini_Generated_Image_68fs3768fs3768fs-2.jpg" alt="Logo" class="h-10 w-10 mx-auto mb-4 grayscale opacity-50 rounded-full" onerror="this.style.display='none'">
+        <p>&copy; 2024 Tension Treenets. All rights reserved.</p>
+        <p class="mt-2">Made for the kid in all of us.</p>
     </footer>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        const sqftInput = document.getElementById('sqft');
-        const netCostEl = document.getElementById('net-cost');
-        const subCostEl = document.getElementById('sub-cost');
-        const totalCostEl = document.getElementById('total-cost');
-        const checkBoxes = ['ledger', 'metal', 'trees', 'trampoline'];
-
-        function updateQuote() {
-            const sqft = parseFloat(sqftInput.value) || 0;
-            const netBase = sqft * 60;
-            
-            let subTotal = 0;
-            if(document.getElementById('ledger').checked) subTotal += 1200; // Est base cost
-            if(document.getElementById('metal').checked) subTotal += 2500;
-            if(document.getElementById('trees').checked) subTotal += 800;
-            if(document.getElementById('trampoline').checked) subTotal += 1500;
-
-            const total = netBase + subTotal;
-
-            netCostEl.innerText = `$${netBase.toLocaleString()}`;
-            subCostEl.innerText = subTotal > 0 ? `~$${subTotal.toLocaleString()}` : "$0";
-            totalCostEl.innerText = `$${total.toLocaleString()}`;
-        }
-
-        sqftInput.addEventListener('input', updateQuote);
-        checkBoxes.forEach(id => document.getElementById(id).addEventListener('change', updateQuote));
-
-        function sendInquiry() {
-            const total = totalCostEl.innerText;
-            const mailto = `mailto:tensiontreenets@gmail.com?subject=Treenet Inquiry - ${total}&body=Hello Cooper,%0D%0AI would like a formal quote for a build with the following estimated specs:%0D%0ASurface Area: ${sqftInput.value} sqft%0D%0AEstimated Total: ${total}%0D%0A%0D%0APlease let me know your thoughts on this project.%0D%0A%0D%0AThank you!`;
-            window.location.href = mailto;
-        }
-
-        // Initial Calc
-        updateQuote();
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-stone-950/90', 'backdrop-blur-md', 'shadow-2xl');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('bg-stone-950/90', 'backdrop-blur-md', 'shadow-2xl');
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        };
     </script>
 </body>
 </html>
+
